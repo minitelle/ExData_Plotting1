@@ -22,8 +22,8 @@ sub3 <- subfeb.data$Sub_metering_3
 png("plot3.png", width=480, height=480)
 
 #Create the plot and lines
-plot(datetime, sub1, type = "l", xlab = "", ylab = "Energy sub mettering")
+plot(datetime, sub1, type = "l", xlab = "", ylab = "Energy sub metering")
 lines(datetime, sub2, col = "red")
 lines(datetime, sub3, col = "blue")
-legend("topright", lty = 1, col = c("black", "red", "blue"), legend = c("Sub_mettering_1", "Sub_mettering_2", "Sub_mettering_3"))
+legend("topright", lty = 1, col = c("black", "red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
 dev.off()

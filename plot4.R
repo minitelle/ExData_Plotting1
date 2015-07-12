@@ -22,16 +22,16 @@ volt <- subfeb.data$Voltage
 png("plot4.png", width=480, height=480)
 
 # Create the 4 plots
-par(mfrow = c(2, 2), mar = c(4, 4, 2, 1))
+par(mfrow = c(2, 2), mar = c(5, 4, 4, 2) + 0.1)
 # GAP plot  
   plot(datetime, GAP, type = "l", xlab = "", ylab = "Global Active Power")
 # voltage plot 
 plot(datetime, volt, type = "l", xlab = "datetime", ylab = "Voltage")
 # Submettering plot 
-plot(datetime, sub1, type = "l", xlab = "", ylab = "Energy sub mettering")
+plot(datetime, sub1, type = "l", xlab = "", ylab = "Energy sub metering")
   lines(datetime, sub2, col = "red")
   lines(datetime, sub3, col = "blue")
-  legend("topright", lty = 1, col = c("black", "red", "blue"), legend = c("Sub_mettering_1", "Sub_mettering_2", "Sub_mettering_3"), bty = "n")
+  legend("topright", lty = 1, col = c("black", "red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), bty = "n")
 # GRP plot 
 plot(datetime, GRP, type = "l", xlab = "datetime", ylab = "Global_reactive_power")
 
